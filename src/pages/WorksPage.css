@@ -1,0 +1,89 @@
+/* WorksPage.css - Premium & Minimalist Portfolio Page Styling */
+
+.works-page-container {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(180deg, #f8fafc 0%, #eef4fa 40%, #f1f5f9 100%);
+  color: #0f172a;
+  padding-top: 110px;
+  padding-bottom: 120px;
+}
+
+/* Category Filter Bar */
+.filter-pill-btn {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.filter-pill-btn.active {
+  background-color: #4173A7;
+  color: #ffffff;
+  border-color: #4173A7;
+  box-shadow: 0 4px 14px rgba(65, 115, 167, 0.3);
+}
+
+.filter-pill-btn:not(.active):hover {
+  background-color: #e2e8f0;
+  color: #0f172a;
+}
+
+/* Project Item Card Container */
+.project-zigzag-item {
+  position: relative;
+  padding-bottom: 3.5rem;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.project-zigzag-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+/* Smooth Image Hover Container */
+.project-img-frame {
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  background-color: #ffffff;
+  box-shadow: 0 20px 45px -15px rgba(15, 23, 42, 0.12), 0 0 20px rgba(65, 115, 167, 0.08);
+}
+
+.project-img-frame:hover {
+  box-shadow: 0 30px 60px -15px rgba(65, 115, 167, 0.25);
+  border-color: rgba(65, 115, 167, 0.4);
+}
+
+/* Mac Window Header Dots */
+.mac-dots-header {
+  background: rgba(248, 250, 252, 0.95);
+  backdrop-filter: blur(8px);
+  padding: 12px 18px;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Stat Box Styling */
+.metric-card-box {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 12px 14px;
+  transition: all 0.25s ease;
+}
+
+.metric-card-box:hover {
+  border-color: #4173A7;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(65, 115, 167, 0.12);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1023px) {
+  .works-page-container {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+

@@ -1,0 +1,178 @@
+/* Quote Section Styles - Placed before Services Section */
+.quote-section-wrapper {
+  background-color: #ffffff;
+  color: #111827;
+  padding: 100px 24px 110px;
+  position: relative;
+  z-index: 20;
+  border-top: 1px solid #f1f5f9;
+  border-bottom: 1px solid #f1f5f9;
+  text-align: center;
+}
+
+.quote-container {
+  max-width: 1040px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Quote Mark Icon Accent */
+.quote-mark-icon {
+  width: 54px;
+  height: 54px;
+  color: #406A99;
+  opacity: 0.8;
+  margin-bottom: 24px;
+}
+
+/* Quote Statement */
+.quote-text {
+  font-size: clamp(26px, 4vw, 44px);
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -1px;
+  color: #111827;
+  margin-bottom: 24px;
+}
+
+.quote-highlight {
+  color: #406A99;
+}
+
+/* Attribution Line */
+.quote-attribution {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #64748b;
+  margin-bottom: 44px;
+}
+
+.attribution-line {
+  width: 32px;
+  height: 2px;
+  background-color: #406A99;
+}
+
+/* Action Buttons Container */
+.quote-buttons-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+/* Primary Contact Us Button */
+.btn-quote-contact {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #406A99;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 800;
+  padding: 14px 34px;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 8px 24px rgba(64, 106, 153, 0.35);
+  text-decoration: none;
+}
+
+.btn-quote-contact:hover {
+  background-color: #32547a;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(64, 106, 153, 0.45);
+}
+
+/* Secondary Explore Services Button */
+.btn-quote-explore {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: transparent;
+  color: #406A99;
+  font-size: 15px;
+  font-weight: 800;
+  padding: 14px 32px;
+  border-radius: 9999px;
+  border: 2px solid #406A99;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+}
+
+.btn-quote-explore:hover {
+  background-color: rgba(64, 106, 153, 0.08);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(64, 106, 153, 0.15);
+}
+
+.arrow-icon {
+  transition: transform 0.2s ease;
+}
+
+.btn-quote-contact:hover .arrow-icon,
+.btn-quote-explore:hover .arrow-icon {
+  transform: translateX(4px);
+}
+
+/* Modal for Contact Us */
+.contact-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(8px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.contact-modal-card {
+  background: #ffffff;
+  border-radius: 28px;
+  padding: 40px;
+  max-width: 520px;
+  width: 100%;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+  position: relative;
+}
+
+.contact-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #f1f5f9;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 640px) {
+  .quote-buttons-row {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-quote-contact, .btn-quote-explore {
+    width: 100%;
+    justify-content: center;
+  }
+}

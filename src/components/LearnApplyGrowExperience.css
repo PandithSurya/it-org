@@ -1,0 +1,273 @@
+/* Top 1% Designer - Learn -> Apply -> Grow Video Canvas Scrubbing Section */
+.lag-container {
+  position: relative;
+  width: 100%;
+  height: 320vh; /* 320vh vertical scroll space driving the 80 canvas frames */
+  background-color: #080c14;
+  color: #ffffff;
+  z-index: 50;
+  isolation: isolate;
+}
+
+.lag-sticky-viewport {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #080c14;
+  z-index: 50;
+}
+
+/* Background Canvas Scrubbing */
+.lag-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* Vignette & Contrast Overlay Filter */
+.lag-overlay-filter {
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(circle at center, rgba(8, 12, 20, 0.4) 0%, rgba(8, 12, 20, 0.88) 100%),
+    linear-gradient(180deg, rgba(8, 12, 20, 0.6) 0%, transparent 30%, transparent 70%, rgba(8, 12, 20, 0.7) 100%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Content Viewport Container */
+.lag-content-layer {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 1320px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+}
+
+/* Floating Editorial Text (No Box) */
+.lag-section-card {
+  position: absolute;
+  width: 100%;
+  max-width: 640px;
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border: none;
+  padding: 0;
+  box-shadow: none;
+  will-change: transform, opacity, filter;
+  transition: opacity 0.1s linear, transform 0.1s linear;
+}
+
+/* Card Alignment Options */
+.card-left {
+  left: 6vw;
+}
+
+.card-right {
+  right: 6vw;
+}
+
+.card-center {
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  max-width: 680px;
+}
+
+/* Badge Pill */
+.lag-pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #82b5eb;
+  background: rgba(64, 106, 153, 0.25);
+  border: 1px solid rgba(130, 181, 235, 0.4);
+  padding: 6px 20px;
+  border-radius: 9999px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 18px rgba(64, 106, 153, 0.35);
+}
+
+.lag-badge-dot {
+  width: 6px;
+  height: 6px;
+  background-color: #82b5eb;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #82b5eb;
+}
+
+/* Card Titles & Typography */
+.lag-section-title {
+  font-size: clamp(32px, 4.2vw, 50px);
+  font-weight: 800;
+  letter-spacing: -1.4px;
+  color: #ffffff;
+  line-height: 1.15;
+  margin-bottom: 16px;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+}
+
+.title-glow {
+  color: #82b5eb;
+  background: linear-gradient(135deg, #ffffff 0%, #90c2f7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.lag-section-desc {
+  font-size: 16.5px;
+  color: #cbd5e1;
+  line-height: 1.65;
+  font-weight: 500;
+}
+
+/* Action Buttons inside Card 3 */
+.lag-card-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+
+.btn-lag-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #406A99;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 800;
+  padding: 12px 28px;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 6px 20px rgba(64, 106, 153, 0.4);
+}
+
+.btn-lag-primary:hover {
+  background: #5080b8;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(64, 106, 153, 0.5);
+}
+
+.btn-lag-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 12px 24px;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn-lag-outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #ffffff;
+}
+
+/* Flying Letters Kinetic Styling for Section 2 */
+.flying-letters-container {
+  display: inline-block;
+}
+
+.flying-char {
+  display: inline-block;
+  will-change: transform, opacity;
+  transition: transform 0.05s linear, opacity 0.05s linear;
+}
+
+.space-char {
+  width: 0.35em;
+}
+
+/* Step Progress Indicator Bar at Bottom */
+.lag-bottom-bar {
+  position: absolute;
+  bottom: 32px;
+  left: 6vw;
+  right: 6vw;
+  z-index: 15;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.lag-step-indicators {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.step-dot-pill {
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.5);
+  padding: 6px 16px;
+  border-radius: 9999px;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.step-dot-pill.active {
+  color: #ffffff;
+  background: #406A99;
+  border-color: #82b5eb;
+  box-shadow: 0 0 20px rgba(64, 106, 153, 0.6);
+}
+
+.pill-glow-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.step-dot-pill.active .pill-glow-dot {
+  background: #ffffff;
+  box-shadow: 0 0 6px #ffffff;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .card-left, .card-right, .card-center {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    width: 92%;
+    text-align: center;
+    padding: 32px 24px;
+  }
+}

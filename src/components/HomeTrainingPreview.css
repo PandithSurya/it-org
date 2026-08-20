@@ -1,0 +1,340 @@
+/* Top 1% Designer - Home Training Preview Section */
+.home-training-wrapper {
+  background-color: #f8fafc; /* Crisp off-white / light slate canvas backdrop */
+  color: #0f172a;
+  padding: 110px 24px 120px;
+  position: relative;
+  z-index: 20;
+  border-top: 1px solid #e2e8f0;
+}
+
+.home-training-container {
+  max-width: 1360px;
+  margin: 0 auto;
+}
+
+/* Header with Editorial Layout */
+.home-training-header-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px;
+  margin-bottom: 56px;
+}
+
+.header-title-box {
+  max-width: 680px;
+}
+
+.home-training-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  color: #406A99;
+  text-transform: uppercase;
+  background: rgba(64, 106, 153, 0.08);
+  border: 1px solid rgba(64, 106, 153, 0.22);
+  padding: 6px 18px;
+  border-radius: 9999px;
+  margin-bottom: 16px;
+}
+
+.badge-dot {
+  width: 6px;
+  height: 6px;
+  background-color: #406A99;
+  border-radius: 50%;
+}
+
+.home-training-title {
+  font-size: clamp(32px, 4.2vw, 52px);
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  color: #0f172a;
+  line-height: 1.12;
+}
+
+.title-blue {
+  color: #406A99;
+  background: linear-gradient(135deg, #406A99 0%, #2b4c73 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header-stats-row {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.header-stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 16px;
+  border-left: 2px solid #cbd5e1;
+}
+
+.h-stat-num {
+  font-size: 24px;
+  font-weight: 800;
+  color: #406A99;
+  line-height: 1.1;
+}
+
+.h-stat-desc {
+  font-size: 12px;
+  font-weight: 700;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* 3 Premium Course Cards Grid */
+.featured-courses-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-bottom: 60px;
+}
+
+/* Course Card Construction */
+.featured-card-top1 {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.04),
+    0 1px 3px rgba(0, 0, 0, 0.02);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  cursor: pointer;
+}
+
+.featured-card-top1:hover {
+  border-color: #406A99;
+  transform: translateY(-8px);
+  box-shadow: 
+    0 24px 50px rgba(64, 106, 153, 0.18),
+    0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+/* Top Thumbnail Banner */
+.card-thumbnail-box {
+  position: relative;
+  height: 170px;
+  width: 100%;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+.card-thumbnail-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.2) 0%, rgba(15, 23, 42, 0.85) 100%);
+}
+
+.card-top-tag {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 4px 12px;
+  border-radius: 9999px;
+  z-index: 5;
+}
+
+.card-icon-floating {
+  position: absolute;
+  bottom: 14px;
+  right: 16px;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #406A99;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  z-index: 5;
+  transition: transform 0.3s ease;
+}
+
+.featured-card-top1:hover .card-icon-floating {
+  transform: scale(1.1) rotate(-4deg);
+  background: #406A99;
+  color: #ffffff;
+}
+
+.card-icon-floating svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* Card Body */
+.card-body-content {
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.card-title-top1 {
+  font-size: 20px;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.3;
+  margin-bottom: 10px;
+  letter-spacing: -0.4px;
+  transition: color 0.2s ease;
+}
+
+.featured-card-top1:hover .card-title-top1 {
+  color: #406A99;
+}
+
+.card-desc-top1 {
+  font-size: 13.5px;
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.card-skills-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 24px;
+}
+
+.skill-tag-pill {
+  font-size: 11px;
+  font-weight: 700;
+  color: #475569;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  padding: 4px 10px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.featured-card-top1:hover .skill-tag-pill {
+  border-color: rgba(64, 106, 153, 0.3);
+  color: #406A99;
+}
+
+/* Card Footer */
+.card-footer-top1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.meta-duration {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.meta-duration svg {
+  width: 14px;
+  height: 14px;
+  color: #406A99;
+}
+
+.card-link-action {
+  font-size: 13px;
+  font-weight: 800;
+  color: #406A99;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: gap 0.2s ease;
+}
+
+.featured-card-top1:hover .card-link-action {
+  gap: 8px;
+}
+
+/* Redesigned Premium CTA Banner Box */
+/* Simple Centered View More Button */
+.view-more-container {
+  text-align: center;
+  margin-top: 12px;
+}
+
+.view-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #406A99;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 800;
+  padding: 14px 34px;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 8px 24px rgba(64, 106, 153, 0.35);
+}
+
+.view-more-btn:hover {
+  background: #32547a;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(64, 106, 153, 0.45);
+}
+
+.view-more-arrow {
+  transition: transform 0.2s ease;
+}
+
+.view-more-btn:hover .view-more-arrow {
+  transform: translateX(4px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .home-training-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .featured-courses-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .courses-cta-banner {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .featured-courses-grid {
+    grid-template-columns: 1fr;
+  }
+}
